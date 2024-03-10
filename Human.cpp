@@ -6,8 +6,8 @@
 Human::Human(std::string name){this->name = name;};
 Human::Human(){this->name = "Human";};
 
-Move* Human::makeMove(MoveSet* MoveSet){
-
+Move* Human::makeMove(){
+MoveSet* MoveSet;
 std::string move;
 std::cout<< "Enter move:";
 std::cin >> move;

@@ -8,11 +8,10 @@
 class Human : public Player{
 private:
 std::string name;
-//vector of possible moves
 public:
 Human(std::string name);
 Human();
-Move* makeMove(MoveSet* moveSet);
+Move* makeMove();
 std::string getName();
 
 };
