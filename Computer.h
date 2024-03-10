@@ -8,7 +8,7 @@ private:
 char move;
 public:
 Computer();
-Move* makeMove(MoveSet* moveSet);
+Move* makeMove();
 std::string getName();
 };
 #endif

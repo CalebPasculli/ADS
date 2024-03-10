@@ -6,7 +6,7 @@
 class Player{
     private:
     public:
-    virtual Move* makeMove(MoveSet* moveSet) = 0;
+    virtual Move* makeMove() = 0;
     virtual  std::string getName() = 0;
 };
 #endif

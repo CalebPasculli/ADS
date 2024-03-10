@@ -4,7 +4,7 @@
 #include "Rock.h"
 Computer::Computer(){move = 'R';}
 
-Move* Computer::makeMove(MoveSet* moveSet){
+Move* Computer::makeMove(){
     return(moveSet->getMove("Rock"));
 }
 std::string Computer::getName(){
