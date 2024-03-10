@@ -1,26 +1,20 @@
 #include "Human.h"
 #include <string>
 #include "Referee.h"
-
+#include "MoveSet.h"
 Referee::Referee(){}
 
 
 Player * Referee::refGame(Player * player1, Player * player2){
-char player1_move = player1->makeMove();
-char player2_move = player2->makeMove();
-if (player1_move == player2_move){
-    return(nullptr);
-}else if (player1_move=='S' && player2_move=='R'){
-    return(player2);
-}else if (player1_move=='R' && player2_move=='S'){
-    return(player2);
-}else if (player1_move=='P' && player2_move=='R'){
-    return(player1);
-}else if (player1_move=='R' && player2_move=='P'){
-    return(player2);
-}else if (player1_move=='S' && player2_move=='P'){
-    return(player1);
-}else if (player1_move=='P' && player2_move=='S'){
-    return(player2);
+MoveSet MoveSet;
+Move* player1_move = player1->makeMove(&MoveSet);
+Move* player2_move = player2->makeMove(&MoveSet);
+
+switch(player1_move->checkWin(player2_move)) {
+    case 1: return player1;
+    case 2: return player2;
+    case 3: return nullptr;
+    case 4: return nullptr;//invalid game
 }
+
 }

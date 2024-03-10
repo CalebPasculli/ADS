@@ -1,11 +1,11 @@
 #include "Player.h"
 #include <string>
 #include "Computer.h"
-
+#include "Rock.h"
 Computer::Computer(){move = 'R';}
 
-char Computer::makeMove(){
-    return('R');
+Move* Computer::makeMove(MoveSet* moveSet){
+    return(moveSet->getMove("Rock"));
 }
 std::string Computer::getName(){
     std::string name = "Computer";
