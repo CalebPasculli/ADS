@@ -5,6 +5,7 @@
 class Move {
  protected:
   std::string name;
+  // vectors containing move interactions
   std::vector<std::string> winList;
   std::vector<std::string> loseList;
   std::vector<std::string> tieList;

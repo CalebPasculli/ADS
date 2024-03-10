@@ -1,19 +1,20 @@
 #ifndef HUMAN_H
 #define HUMAN_H
+#include <iostream>
 #include <string>
-#include "Player.h"
+
 #include "Move.h"
 #include "MoveSet.h"
-#include <iostream>
-class Human : public Player{
-private:
-std::string name;
-public:
-Human(std::string name);
-Human();
-Move* makeMove();
-std::string getName();
+#include "Player.h"
+class Human : public Player {
+ private:
+  std::string name;
 
+ public:
+  Human(std::string name);
+  Human();
+  Move* makeMove();
+  std::string getName();
 };
 
 #endif

@@ -1,33 +1,33 @@
 #include "MoveSet.h"
-#include "Rock.h"
-#include "Paper.h"
-#include "Scissors.h"
+
 #include "Monkey.h"
 #include "Ninja.h"
+#include "Paper.h"
 #include "Pirate.h"
 #include "Robot.h"
+#include "Rock.h"
+#include "Scissors.h"
 #include "Zombie.h"
 
-Move* MoveSet::getMove(std::string move){
-
-if (move == "Rock"){
+// Function receives string and returns corresponding object
+Move* MoveSet::getMove(std::string move) {
+  if (move == "Rock") {
     return new Rock();
-}else if(move == "Paper"){
+  } else if (move == "Paper") {
     return new Paper();
-}else if(move == "Scissors"){
+  } else if (move == "Scissors") {
     return new Scissors();
-}else if(move == "Monkey"){
+  } else if (move == "Monkey") {
     return new Monkey();
-}else if(move == "Ninja"){
+  } else if (move == "Ninja") {
     return new Ninja();
-}else if(move == "Pirate"){
+  } else if (move == "Pirate") {
     return new Pirate();
-}else if(move == "Robot"){
+  } else if (move == "Robot") {
     return new Robot();
-}else if(move == "Zombie"){
+  } else if (move == "Zombie") {
     return new Zombie();
-}else{
+  } else {
     return nullptr;
-}
-
+  }
 }
