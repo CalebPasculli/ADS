@@ -1,10 +1,13 @@
 #include <iostream>
 #include <cmath>
+#include "Reverser.h"
+#include "Truckloads.h"
 int main(void){
-float f;
-f = float(7/2);
-
-std::cout <<f<< std::endl;
+Reverser r;
+Truckloads t;
+t.numTrucks(1024, 5);
+std::cout<< r.reverseDigit(123456789) <<std::endl;
+std::cout<< r.reverseString("abcdefghijklmnopqrstuvwxyz") <<std::endl;
 }
 
 
